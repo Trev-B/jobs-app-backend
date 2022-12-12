@@ -15,6 +15,7 @@ const JobSchema = new mongoose.Schema(
     status: {
       type: String,
       enum: ['interview', 'declined', 'pending'],
+      required: [true, "Status must be 'interview', 'declined', or 'pending'"],
       default: 'pending',
     },
     location: {
